@@ -2,9 +2,13 @@ const express = require("express");
 const app = express();
 
 // test genres fetch
-const testGenreModelFile = require('./models/Videos');
+const testGenreModelFile = require('./models/Users');
 
 app.get("/", (req, res) => {
+  res.json(testGenreModelFile.all());
+});
+
+app.get("/test3", (req, res) => {
   res.json(testGenreModelFile.all());
 });
 
